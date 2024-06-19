@@ -20,7 +20,3 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
-.w-28 {
-	width: '28px';
-}

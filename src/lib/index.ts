@@ -1,10 +1,11 @@
 // Reexport your entry components here
-import Brand from "./header/Brand.svelte";
-import AccountDropdown from "./header/AccountDropdown.svelte";
-import Footer from "./header/Footer.svelte";
-import Header from "./header/Header.svelte";
+import "./app.css";
+import StxEcoHeader from "./header/StxEcoHeader.svelte";
+import StxEcoBrand from "./header/StxEcoBrand.svelte";
+import StxEcoAccountDropdown from "./header/StxEcoAccountDropdown.svelte";
+import StxEcoFooter from "./header/StxEcoFooter.svelte";
 
-export { Brand };
-export { AccountDropdown };
-export { Footer };
-export { Header };
+export { StxEcoHeader };
+export { StxEcoBrand };
+export { StxEcoAccountDropdown };
+export { StxEcoFooter };

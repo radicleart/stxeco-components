@@ -1,18 +1,27 @@
 <script lang="ts">
-	import { Navbar, NavBrand, NavLi, NavUl, NavHamburger } from 'flowbite-svelte'
+	import { Navbar, NavBrand, NavLi, NavUl, NavHamburger, Dropdown, DropdownItem } from 'flowbite-svelte'
 	import { createEventDispatcher } from "svelte";
-	import Brand from './Brand.svelte'
-  	import AccountDropdown from './AccountDropdown.svelte';
+	import Brand from './StxEcoBrand.svelte'
+  	import AccountDropdown from './StxEcoAccountDropdown.svelte';
   	import { page } from '$app/stores';
+    import { CheckCircle, Icon } from 'svelte-hero-icons';
 
 	export let headerLinks;
 	export let loggedIn = false;
-	export let heights: {stacksHeight:number; bitcoinHeight:number};
+	export let heights: {stacksHeight:string; bitcoinHeight:string};
 	export let account:{stxAddress:string;cardinal:string;ordinal:string;bnsNameInfo: {names: Array<string>}};
-	export let balances:{sbtcBalance?:number;cardinalBalance?:number;ordinalBalance?:number;stacksBalance?:number}
+	export let balances:{sbtcBalance?:string;cardinalBalance?:string;ordinalBalance?:string;stacksBalance?:string}
 
 	const dispatch = createEventDispatcher();
 	let component;
+
+	let dropdownOpen = false;
+
+	const handleClick = (e:any)=> {
+		e.preventDefault();
+		dropdownOpen = !dropdownOpen
+		//alert ('Clicked on: ' + e.target)
+	}
 
 	const doLogin = async () => {
 		dispatch('do_login')
@@ -66,7 +75,28 @@
 	>
 		<div class="flex">
 			{#each headerLinks as link}
+			{#if link.items}
+			<NavLi nonActiveClass={getNavActiveClass(link.name)} on:click={(e) => handleClick(e)} >
+				<a href="/" on:click|preventDefault={() => {}}>{link.display}</a>
+				<svg class="inline w-4 h-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor">
+					<path fill-rule="evenodd" d="M4.22 6.22a.75.75 0 0 1 1.06 0L8 8.94l2.72-2.72a.75.75 0 1 1 1.06 1.06l-3.25 3.25a.75.75 0 0 1-1.06 0L4.22 7.28a.75.75 0 0 1 0-1.06Z" clip-rule="evenodd" />
+				</svg>
+			</NavLi>
+			<Dropdown
+				containerClass="z-30 rounded-lg !bg-black text-white !border py-1 !border-[#131416]/[0.16]"
+				placement='bottom-start'>
+				
+					{#each link.items as item}
+					<DropdownItem defaultClass="text-white relative hover:bg-sand-300/50 pl-12 pr-4 py-2  focus-visible:outline focus-visible:outline-2 focus-visible:outline-primary-500/50" >
+						<Icon src="{CheckCircle}" mini class="absolute left-4 top-1/2 -translate-y-1/2 inline h-6 w-6 text-sand-800" aria-hidden="true" />
+						<NavLi nonActiveClass={getNavActiveClass(item.name)}><a href={item.href} target={item.target || '_self'}>{item.display}</a></NavLi>
+					</DropdownItem>
+					{/each}
+
+			</Dropdown>
+			{:else}
 			<NavLi nonActiveClass={getNavActiveClass(link.name)}><a href={link.href} target={link.target || '_self'}>{link.display}</a></NavLi>
+			{/if}
 			{/each}
 		</div>
 		</NavUl>

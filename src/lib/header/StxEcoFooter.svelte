@@ -1,6 +1,6 @@
 <script lang="ts">
   import { afterUpdate, beforeUpdate, onDestroy, onMount } from 'svelte';
-  import LogoStacks from '$lib/assets/LogoStacks.svelte';
+  import LogoStacks from '../assets/LogoStacks.svelte';
 
   console.log('Parent component context:');
 
