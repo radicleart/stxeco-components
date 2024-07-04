@@ -15,7 +15,7 @@
 	</div>
 	<div class="h-2 bg-sand-400 rounded my-1 animate-pulse"></div>
 </div>
-
+{#if link.address}
 <div class="sm:flex sm:items-center sm:justify-between mt-6">
 <h1 class="text-[#0A0A0B] text-2xl sm:text-4xl sm:-mx-4">
 	<a href={link.address} class="py-2 px-4 rounded-md" target="_blank">
@@ -28,6 +28,7 @@
 	</a>
 </h1>
 </div>
+{/if}
 <div class="flex flex-row w-full my-8">
 	<div class="flex flex-col w-full my-8 bg-[#F4F3F0] rounded-2xl">
 		<div class="py-10 px-10 md:px-12 md:grid md:gap-12 md:grid-flow-col md:auto-cols-auto overflow-hidden relative">
