@@ -38,7 +38,7 @@
       <div class="py-16 space-y-6 relative z-[1]">
         <p class="text-lg text-[#131416]/[0.64]">Explore the Stacks:</p>
 
-        <div class="sm:flex space-y-4 sm:space-y-0 gap-x-6">
+        <div class="sm:flex space-y-4 sm:space-y-0 gap-x-10">
           <a href="https://www.stacks.co/ecosystem" class="text-sm font-mono uppercase inline-flex items-center bg-[#131416] px-4 py-2  text-white rounded-lg border border-transparent focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-black-500/50 shrink-0">
             Ecosystem&nbsp;<span class="text-[#FDFDFC]/[0.64]">-&gt;</span>
           </a>
