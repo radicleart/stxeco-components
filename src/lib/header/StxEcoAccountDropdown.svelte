@@ -71,7 +71,7 @@
 							<div id="icon-bns"><span><StacksIcon clazz={'w-5 h-5 inline mr-2'}/></span> {#if (account.bnsNameInfo?.names?.length || 0) > 0}<span>{account.bnsNameInfo?.names[0]}</span> :{/if} <span>{transformAddress(account.stxAddress)}</span></div>
 						</div>
 						<div class="flex items-center">
-							<button on:click|preventDefault={(event) => copy(event, 'icon-bns', 'bns')} class="h-8 w-8 rounded-md bg-black flex items-center justify-center border border-transparent hover:border-sand-900 transition duration-200 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary-500/50">
+							<button on:click|preventDefault={(event) => copy(event, 'icon-bns', account.stxAddress)} class="h-8 w-8 rounded-md bg-black flex items-center justify-center border border-transparent hover:border-sand-900 transition duration-200 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary-500/50">
 								<Icon on:keyup on:click={(event) => handleClick(event)} src="{ClipboardDocument}" class="h-5 w-5 text-white" aria-hidden="true" />
 							</button>
 						</div>
@@ -82,10 +82,10 @@
 					<div class="px-4 py-2 flex gap-4 justify-between">
 						<div class="flex items-center gap-3 text-sm">
 							<LogoBitcoin clazz={'w-5 h-5'}/>
-							<span id="icon-bitcoin">{transformAddress(account.cardinal)}</span>
+							<span id="icon-bitcoin1">{transformAddress(account.cardinal)}</span>
 						</div>
 						<div class="ml-auto flex items-center">
-							<button on:click|preventDefault={(event) => copy(event, 'icon-bitcoin', account.cardinal)} class="h-8 w-8 rounded-md bg-black flex items-center justify-center border border-transparent hover:border-sand-900 transition duration-200 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary-500/50">
+							<button on:click|preventDefault={(event) => copy(event, 'icon-bitcoin1', account.cardinal)} class="h-8 w-8 rounded-md bg-black flex items-center justify-center border border-transparent hover:border-sand-900 transition duration-200 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary-500/50">
 								<Icon src="{ClipboardDocument}" class="h-5 w-5 text-white" aria-hidden="true" />
 							</button>
 						</div>
@@ -94,12 +94,12 @@
 
 				<div class="text-sm mb-2 ">
 					<div class="px-4 py-2 flex gap-4 justify-between">
-						<div id="icon-bitcoin" class="flex items-center gap-3 text-sm">
+						<div id="icon-bitcoin2" class="flex items-center gap-3 text-sm">
 							<LogoBitcoin clazz={'w-5 h-5'}/>
 							<span>{transformAddress(account.ordinal)}</span>
 						</div>
 						<div class="ml-auto flex items-center">
-							<button on:click|preventDefault={(event) => copy(event, 'icon-bitcoin', account.ordinal)} class="h-8 w-8 rounded-md bg-black flex items-center justify-center border border-transparent hover:border-sand-900 transition duration-200 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary-500/50">
+							<button on:click|preventDefault={(event) => copy(event, 'icon-bitcoin2', account.ordinal)} class="h-8 w-8 rounded-md bg-black flex items-center justify-center border border-transparent hover:border-sand-900 transition duration-200 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary-500/50">
 								<Icon src="{ClipboardDocument}" class="h-5 w-5 text-white" aria-hidden="true" />
 							</button>
 						</div>
