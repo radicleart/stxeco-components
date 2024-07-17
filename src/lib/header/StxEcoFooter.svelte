@@ -42,8 +42,8 @@
           <a href="https://www.stacks.co/ecosystem" class="text-sm font-mono uppercase inline-flex items-center bg-[#131416] px-4 py-2  text-white rounded-lg border border-transparent focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-black-500/50 shrink-0">
             Ecosystem&nbsp;<span class="text-[#FDFDFC]/[0.64]">-&gt;</span>
           </a>
-          <a href="https://www.stacks.co/build" class="text-sm font-mono uppercase inline-flex items-center bg-[#EEEBE7] px-4 py-2  text-[#27282B] rounded-lg border border-transparent focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-black-500/50 shrink-0">
-            Developer Hub&nbsp;<span class="text-[#27282B]">-&gt;</span>
+          <a href="https://github.com/radicleart/stxeco-vote" class="text-sm font-mono uppercase inline-flex items-center bg-[#EEEBE7] px-4 py-2  text-[#27282B] rounded-lg border border-transparent focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-black-500/50 shrink-0">
+            Github&nbsp;<span class="text-[#27282B]">-&gt;</span>
           </a>
         </div>
       </div>
