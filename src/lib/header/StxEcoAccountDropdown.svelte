@@ -1,7 +1,6 @@
 <script lang="ts">
 	import { Dropdown, DropdownItem } from 'flowbite-svelte'
 	import { Icon, ClipboardDocument } from "svelte-hero-icons"
-	import LogoSBTC from '../assets/LogoSBTC.svelte';
 	import LogoBitcoin from '../assets/LogoBitcoin.svelte';
 	import StacksIcon from '../assets/StacksIcon.svelte';
 	import { makeFlash, truncate } from "../helper.js";
@@ -91,7 +90,7 @@
 						</div>
 					</div>
 				</div>
-
+				<!--
 				<div class="text-sm mb-2 ">
 					<div class="px-4 py-2 flex gap-4 justify-between">
 						<div id="icon-bitcoin2" class="flex items-center gap-3 text-sm">
@@ -105,6 +104,7 @@
 						</div>
 					</div>
 				</div>
+				-->
 
 			</div>
 			<div>
@@ -128,6 +128,8 @@
 						{balances.cardinalBalance}
 					</div>
 				</div>
+
+				<!--
 				<div class="px-4 py-2 flex gap-4 justify-between">
 					<div class="flex items-center gap-3 text-sm">
 						<LogoBitcoin clazz={'w-5 h-5'}/>
@@ -146,6 +148,7 @@
 						{balances.sbtcBalance}
 					</div>
 				</div>
+				-->
 
 			</div>
 		</div>
